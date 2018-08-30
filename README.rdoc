@@ -5,7 +5,7 @@
 ### This project is based on Udemy [Professional Ruby on Rails Coding Course](https://www.udemy.com/professional-ruby-on-rails-coding-course/)
 
 ## Models
-- Post -> date:date rationale:text
+x Post -> date:date rationale:text
 x User -> Devise
 x AdminUser -> STI
 
