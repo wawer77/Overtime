@@ -27,6 +27,8 @@ group :development do
   gem 'spring'
 end
 
+gem 'devise', '~> 4.5'
+
 #Added when upgrading to Rails 5 (further steps in the tutorial)
 gem 'administrate', '~> 0.10.0'
 
