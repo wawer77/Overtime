@@ -20,4 +20,6 @@ x AdminUser -> STI
 Bootstrap -> formatting
 
 ## Refactor TODOS:
+- Add full_name for user
 - Refactor user association ingeration test in user_spec
+- Figure out why errors show up in log, not the ruby-error-page

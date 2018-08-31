@@ -6,8 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+
+@user = User.create(email: "user@test.com", password: "foobar", password_confirmation: "foobar", first_name: "Jon", last_name: "Snow")
+puts "1 user created"
+
 100.times do |post|
-  Post.create!(date: Date.today, rationale: "#{post} rationale content")
+  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id)
 end
 
 puts "100 Posts have been created"
