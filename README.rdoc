@@ -17,9 +17,9 @@ x AdminUser -> STI
 - Needs to be documented if employee did not log overtime
 
 ## UI:
-Bootstrap -> formatting
+x Bootstrap -> formatting
 
 ## Refactor TODOS:
-- Add full_name for user
+x Add full_name for user
 - Refactor user association ingeration test in user_spec
 - Figure out why errors show up in log, not the ruby-error-page
