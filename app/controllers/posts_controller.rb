@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: "Your post was created successfully"
     else
-      render new
+      render :new
     end
   end
   
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
     redirect_to @post, notice: "Your post was edited successfully"
     else
-      render edit
+      render :edit
     end
   end
   
