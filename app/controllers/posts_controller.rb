@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    
     if @post.save
       redirect_to @post, notice: "Your post was created successfully"
     else
@@ -34,6 +33,11 @@ class PostsController < ApplicationController
     end
   end
   
+  def destroy
+    @post.delete
+    redirect_to posts_path, notice: "Your post was deleted"
+  end
+  
   private
   
   def post_params
@@ -43,6 +47,5 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-  
   
 end
