@@ -32,6 +32,7 @@ end
 #Added during development
 gem 'devise', '~> 4.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'gritter', '~> 1.2'
 
 #Added when upgrading to Rails 5 (further steps in the tutorial)
 gem 'administrate', '~> 0.10.0'

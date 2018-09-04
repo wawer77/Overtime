@@ -104,6 +104,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gritter (1.2.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -265,6 +266,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2, >= 4.2.2)
   devise (~> 4.5)
   factory_bot_rails (~> 4.11)
+  gritter (~> 1.2)
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0)
   listen
