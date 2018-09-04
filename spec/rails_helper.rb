@@ -45,4 +45,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  
+  
+  #suggested in the tutorial, but not shure if valid for Rails >5
+  #config.include FactoryGirl::Syntax::Methods
 end

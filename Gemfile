@@ -19,6 +19,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'factory_bot_rails', '~> 4.11'
   #Apparently not needed in updated Rails
   #gem 'database_cleaner'
 end
