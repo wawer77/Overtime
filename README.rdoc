@@ -5,24 +5,24 @@
 ### This project is based on Udemy [Professional Ruby on Rails Coding Course](https://www.udemy.com/professional-ruby-on-rails-coding-course/)
 
 ## Models
-x Post -> date:date rationale:text
-x User -> Devise
-x AdminUser -> STI
+- x Post -> date:date rationale:text
+- x User -> Devise
+- x AdminUser -> STI
 
 ## Features:
 - Approval Workflow
 - SMS Sending -> link to approval or overtime input
-- Administrate admin dashboard
-- Block non admin and guest users
+- x Administrate admin dashboard
+- x Block non admin and guest users
 - Email summary to managers for approval
 - Needs to be documented if employee did not log overtime
 
 ## UI:
-x Bootstrap -> formatting
+- x Bootstrap -> formatting
 - Icons from Font Awesome
-x Update styles for forms
+- x Update styles for forms
 
 ## Refactor TODOS:
-x Add full_name for user
+- x Add full_name for user
 - Refactor user association ingeration test in user_spec
 - Figure out why errors show up in log, not the ruby-error-page
