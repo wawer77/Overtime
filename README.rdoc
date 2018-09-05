@@ -25,5 +25,8 @@
 ## Refactor TODOS:
 - x Add full_name for user
 - Refactor user association ingeration test in user_spec
-- Figure out why errors show up in log, not the ruby-error-page
 - Refactor posts/_form for AdminUser 
+
+## To figure out:
+- Figure out why errors show up in log, not the ruby-error-page
+- Strange zoom when going to admin user path via link and back
