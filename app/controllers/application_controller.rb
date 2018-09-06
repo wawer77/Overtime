@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
   
   #Redirects users to log in when trying to add post
   before_action :authenticate_user!
+  include Pundit
 end
