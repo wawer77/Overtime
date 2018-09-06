@@ -20,8 +20,8 @@ describe "navigate" do
     end
     
     it "has a list of posts" do
-      @post1 = FactoryBot.create(:post)
-      @post2 = FactoryBot.create(:second_post)
+      @post1 = FactoryBot.create(:post, user_id: @user.id)
+      @post2 = FactoryBot.create(:second_post, user_id: @user.id)
       visit posts_path
       expect(page).to have_content(/rationale|more/)
     end
@@ -41,7 +41,7 @@ describe "navigate" do
   describe 'delete' do
     
     it 'can be deleted' do
-      @post = FactoryBot.create(:post)
+      @post = FactoryBot.create(:post, user_id: @user.id)
       visit posts_path
       click_link("delete_post_#{@post.id}_from_index") 
       expect(page.status_code).to eq(200)
@@ -75,22 +75,24 @@ describe "navigate" do
   
   describe "edit" do
     before do
-      @post = FactoryBot.create(:post)
+      @post = FactoryBot.create(:post, user_id: @user.id)
     end
-    
-    it "can be reached by clicking on index page" do
-      visit posts_path
-      click_link("edit_#{@post.id}") 
-      expect(page.status_code).to eq(200)
-    end
-     
+
     it "can be edited" do
       visit edit_post_path(@post)
       expect(page.status_code).to eq(200)
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: "Edited content"
       click_on "Save"
-      expect(page).to have_content("Edited content")
+      expect(page).to have_content("Edited content")    
+     end
+    
+    it 'cannot be edited by non-authoruzed user' do
+      logout(:user)
+      non_auth_user = FactoryBot.create(:non_authorized_user)
+      login_as(non_auth_user, :scope => :user)
+      visit edit_post_path(@post)
+      expect(current_path).to eq(root_path)
     end
   end
 end

@@ -26,7 +26,9 @@
 - x Add full_name for user
 - Refactor user association ingeration test in user_spec
 - Refactor posts/_form for AdminUser 
+- x Fix in post_spec.rb:82 
 
 ## To figure out:
 - Figure out why errors show up in log, not the ruby-error-page
 - Strange zoom when going to admin user path via link and back
+- 'Validation failed: Email has already been taken' shows up suddenly and disappeared after rails db:setup - no testN@... emails in the seed tho
