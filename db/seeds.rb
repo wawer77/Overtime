@@ -11,10 +11,15 @@
 @user = User.create(email: "user@test.com", password: "foobar", password_confirmation: "foobar", first_name: "Jon", last_name: "Snow")
 puts "1 regular user created"
 
-@admin_user = AdminUser.create(email: "admin@test.com", password: "foobar", password_confirmation: "foobar", first_name: "Jon", last_name: "Snow")
+@admin_user = AdminUser.create(email: "admin@test.com", password: "foobar", password_confirmation: "foobar", first_name: "Admin", last_name: "User")
 puts "1 admin user created"
-100.times do |post|
+
+10.times do |post|
   Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id)
 end
+puts "10 Posts have been created"
 
-puts "100 Posts have been created"
+10.times do |post|
+  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @admin_user.id)
+end
+puts "10 Posts have been created"
