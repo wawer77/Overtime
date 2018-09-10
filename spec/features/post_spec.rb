@@ -25,8 +25,15 @@ describe "navigate" do
       visit posts_path
       expect(page).to have_content(/rationale|more/)
     end
+    
+    it "only post creators can see posts" do
+      @other_user = FactoryBot.create(:non_authorized_user)
+      @post1 = FactoryBot.create(:post, user_id: @user.id)
+      @other_post = FactoryBot.create(:post_from_other_user, user_id: @other_user.id)
       
-      
+      visit posts_path
+      expect(page).to_not have_content(/Post from another user/)
+    end      
   end
   
   describe 'new' do

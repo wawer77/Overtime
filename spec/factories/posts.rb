@@ -8,4 +8,11 @@ FactoryBot.define do
     date {Date.yesterday}
     rationale {"Some more rationale"}
   end
+  
+  factory :post_from_other_user, class: "Post" do
+    date {Date.tomorrow}
+    rationale {"Post from another user"}
+  end
+  
+  
 end
