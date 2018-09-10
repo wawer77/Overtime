@@ -4,11 +4,12 @@ describe 'navigate' do
   before do
     @admin_user = FactoryBot.create(:admin_user)
     login_as(@admin_user, :scope => :user)
+    @user = FactoryBot.create(:user)
   end
   
   describe 'edit' do
     before do
-      @post = FactoryBot.create(:post)
+      @post = FactoryBot.create(:post, user_id: @user.id)
       visit edit_post_path(@post)
     end
    
@@ -22,13 +23,20 @@ describe 'navigate' do
     
     it 'cannot be edited by a non-admin' do
       logout(:admin_user)
-      user = FactoryBot.create(:user)
-      login_as(user, :scope => :user)
+      login_as(@user, :scope => :user)
       
       visit edit_post_path(@post)
       expect(page).to_not have_content("Approved")
-
     end 
     
+    it 'cannot be edited by creator after approval' do
+      logout(:admin_user)
+      login_as(@user, :scope => :user)
+      
+      @post.update(status:'approved')
+      visit edit_post_path(@post)
+      expect(current_path).to eq(root_path)
+    
+    end
   end
 end
