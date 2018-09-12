@@ -8,6 +8,7 @@
 - x Post -> date:date rationale:text
 - x User -> Devise
 - x AdminUser -> STI
+- AuditLog
 
 ## Features:
 - Approval Workflow
@@ -19,13 +20,13 @@
 
 ## UI:
 - x Bootstrap -> formatting
-- Icons from Font Awesome
+- x Icons from glyphicons
 - x Update styles for forms
 
 ## Refactor TODOS:
 - x Add full_name for user
 - x Refactor user association ingeration test in user_spec
-- Refactor posts/_form for AdminUser 
+- x Refactor posts/_form for AdminUser 
 - x Fix in post_spec.rb:82 
 
 ## To figure out:
