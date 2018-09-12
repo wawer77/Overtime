@@ -32,3 +32,4 @@
 - Figure out why errors show up in log, not the ruby-error-page
 - Strange zoom when going to admin user path via link and back
 - 'Validation failed: Email has already been taken' shows up suddenly and disappeared after rails db:setup - no testN@... emails in the seed tho
+- Why Rspec passing feature test with decimals, when HTML form doesn't accept it via browser
