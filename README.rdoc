@@ -23,7 +23,11 @@
 - x Icons from glyphicons
 - x Update styles for forms
 
-## Refactor TODOS:
+## TODOS:
+- Integrate validation for phone attr in User:
+  # no spaces/dashes
+  # all characters are a number
+  # exactly 10chars
 - x Add full_name for user
 - x Refactor user association ingeration test in user_spec
 - x Refactor posts/_form for AdminUser 
@@ -34,3 +38,4 @@
 - Strange zoom when going to admin user path via link and back
 - 'Validation failed: Email has already been taken' shows up suddenly and disappeared after rails db:setup - no testN@... emails in the seed tho
 - Why Rspec passing feature test with decimals, when HTML form doesn't accept it via browser
+- Why 10chars in user :phone test to check only characters (not number of them)
