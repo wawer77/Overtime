@@ -8,10 +8,20 @@
 
 
 
-@user = User.create(email: "user@test.com", password: "foobar", password_confirmation: "foobar", first_name: "Jon", last_name: "Snow")
+@user = User.create(email: "user@test.com", 
+                    password: "foobar", 
+                    assword_confirmation: "foobar",                         
+                    first_name: "Jon", 
+                    last_name: "Snow",
+                    phone: "884818313")
 puts "1 regular user created"
 
-@admin_user = AdminUser.create(email: "admin@test.com", password: "foobar", password_confirmation: "foobar", first_name: "Admin", last_name: "User")
+@admin_user = AdminUser.create(email: "admin@test.com", 
+                              password: "foobar", 
+                              password_confirmation: "foobar", 
+                              first_name: "Admin", 
+                              last_name: "User"
+                              phone: "884818313")
 puts "1 admin user created"
 
 @n = 5
