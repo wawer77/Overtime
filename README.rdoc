@@ -24,10 +24,10 @@
 - x Update styles for forms
 
 ## TODOS:
-- Integrate validation for phone attr in User:
-  # no spaces/dashes
-  # all characters are a number
-  # exactly 10chars
+- x Integrate validation for phone attr in User:
+  # x no spaces/dashes
+  # x all characters are a number
+  # x exactly 10chars
 - x Add full_name for user
 - x Refactor user association ingeration test in user_spec
 - x Refactor posts/_form for AdminUser 
