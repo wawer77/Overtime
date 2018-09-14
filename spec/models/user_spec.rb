@@ -33,8 +33,8 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end      
    
-    it "requires phone nb to contain 10 chars" do
-      @user.phone = '12345678911'
+    it "requires phone nb to contain 9 chars" do
+      @user.phone = '1234567891'
       expect(@user).to_not be_valid
     end          
     

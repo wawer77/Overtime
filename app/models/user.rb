@@ -5,12 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates_presence_of :first_name, :last_name, :phone
   has_many :posts
-  
+  has_many :auditlogs
   
   PHONE_REGEX = /\A[0-9]*\Z/
   
   validates_format_of :phone, with: PHONE_REGEX
-  validates :phone, length: {is: 10}
+  validates :phone, length: {is: 9}
   
   def full_name
     last_name + " " + first_name

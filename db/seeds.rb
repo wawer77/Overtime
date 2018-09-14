@@ -7,20 +7,20 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
-@user = User.create(email: "user@test.com", 
+#BANG! in the create method makes the error to popup (not failing silently) when db:setup
+@user = User.create!(email: "user@test.com", 
                     password: "foobar", 
-                    assword_confirmation: "foobar",                         
-                    first_name: "Jon", 
-                    last_name: "Snow",
+                    password_confirmation: "foobar",                         
+                    first_name: "Regular", 
+                    last_name: "User",
                     phone: "884818313")
 puts "1 regular user created"
 
-@admin_user = AdminUser.create(email: "admin@test.com", 
+@admin_user = AdminUser.create!(email: "admin@test.com", 
                               password: "foobar", 
                               password_confirmation: "foobar", 
                               first_name: "Admin", 
-                              last_name: "User"
+                              last_name: "User",
                               phone: "884818313")
 puts "1 admin user created"
 
@@ -34,3 +34,8 @@ puts "#{@n} Posts have been created"
   Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @admin_user.id, overtime_request: 2.5)
 end
 puts "#{@n} Posts have been created"
+
+@n.times do |audit|
+  AuditLog.create!(user_id: User.last.id,  status: 0, start_date: (Date.today - 6.days))
+end
+puts "#{@n} Audit Logs have been created"
