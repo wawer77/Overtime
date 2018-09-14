@@ -12,7 +12,7 @@
 
 ## Features:
 - Approval Workflow
-- SMS Sending -> link to approval or overtime input
+- SMS Sending -> integrate with Heroku scheduler
 - x Administrate admin dashboard
 - x Block non admin and guest users
 - Email summary to managers for approval
@@ -39,3 +39,22 @@
 - 'Validation failed: Email has already been taken' shows up suddenly and disappeared after rails db:setup - no testN@... emails in the seed tho
 - Why Rspec passing feature test with decimals, when HTML form doesn't accept it via browser
 - Why 10chars in user :phone test to check only characters (not number of them)
+
+## AUDIT log:
+keep track if eployyee had overtime
+
+denepdencies
+-User 
+
+Attr:
+-Status (enum) -> pending, complete
+-start_date:date -> default previous Monday
+-date_verified
+
+Monday
+|
+|
+|
+Sunday ---- notification
+
+rails g resource AuditLog user:references status:integer start_date:date end_date:date
