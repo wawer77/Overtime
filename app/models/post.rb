@@ -8,4 +8,3 @@ class Post < ApplicationRecord
   
   validates :overtime_request, numericality: { greater_than: 0.0 }
 end
-
