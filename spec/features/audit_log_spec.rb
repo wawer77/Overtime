@@ -18,7 +18,13 @@ describe 'AuditLog Feaure' do
       expect(page).to have_content(/Snow Jon/)
     end
     
-    xit 'cannot be accessed by non-admin' do
+    it 'cannot be accessed by non-admin' do
+      logout(:user)
+      user = FactoryBot.create(:user)
+      login_as(user, :scope => :user)
+      
+      visit audit_logs_path
+      expect(current_path).to eq(root_path)
     end
   end
 end
