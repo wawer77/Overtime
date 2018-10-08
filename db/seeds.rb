@@ -24,7 +24,7 @@ puts "1 regular user created"
                               phone: "884818313")
 puts "1 admin user created"
 
-@n = 5
+@n = 20
 @n.times do |post|
   Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id, overtime_request: 2.5)
 end

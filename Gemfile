@@ -30,12 +30,13 @@ group :development do
 end
 
 #Added during development
-gem 'devise', '~> 4.5'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.10.0'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'bourbon'
+gem 'devise', '~> 4.5'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'gritter', '~> 1.2'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'pundit', '~> 1.1'
 gem 'twilio-ruby', '~> 5.12.4'
-gem 'dotenv-rails', groups: [:development, :test]
 
