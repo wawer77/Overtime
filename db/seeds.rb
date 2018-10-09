@@ -26,12 +26,12 @@ puts "1 admin user created"
 
 @n = 20
 @n.times do |post|
-  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id, overtime_request: 2.5)
+  Post.create!(date: Date.today, rationale: "#{post} Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.", user_id: @user.id, overtime_request: 2.5)
 end
 puts "#{@n} Posts have been created"
 
 @n.times do |post|
-  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @admin_user.id, overtime_request: 2.5)
+  Post.create!(date: Date.today, rationale: "#{post} Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.", user_id: @admin_user.id, overtime_request: 2.5)
 end
 puts "#{@n} Posts have been created"
 
