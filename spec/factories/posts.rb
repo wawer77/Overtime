@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :post do
+    user
     date {Date.today}
     rationale {"Some rationale"}
     overtime_request {2.5}

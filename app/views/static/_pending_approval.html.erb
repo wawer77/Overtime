@@ -5,9 +5,9 @@
     <p> <span class='pending-details'>Rationale:</span> <%= truncate pending_approval.rationale, length: 47 %> </p>
     <div class='row'>
       <div class='col-md-6 column'>
-        <%= link_to 'Approve', root_path, class: 'btn btn-success btn-lock' %>
+        <%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-lock', id: "approve_#{pending_approval.id}" %>
       </div>
-        <%= link_to 'Review', root_path, class: 'btn btn-warning btn-lock' %>
+        <%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-warning btn-lock' %>
       <div class='col-md-6 column'>
       </div>
     </div>
