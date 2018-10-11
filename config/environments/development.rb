@@ -23,7 +23,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   #Add as suggested in devise
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+  config.action_mailer.default_url_options = { host: '0.0.0.0', port: 3000}
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.pefrofm_deliveries = true
+  config.action_mailer.perform_deliveries = true
 end
